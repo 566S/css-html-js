@@ -1,0 +1,132 @@
+body{
+    background-color: #ccc;
+    overflow-x: hidden;
+}
+.blobs{
+    filter: url(#goo);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #b10.blob{
+    transform: scale(0.5);
+    z-index: 1;
+    background-color: coral;
+} */
+.blob{
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.blob:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+
+.blob:hover{
+    background-color: #b5a5a5;
+}
+#open{
+    display: none;
+}
+#b1{
+    z-index: 1;
+    background-color: coral;
+}
+
+#b1:before{
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b1:hover{
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+#b2:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b3:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b4:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b5:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b6:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b7:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b8:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b9:before{
+    
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#b10:before{
+    background: url("/src/icons/burger.png") no-repeat;
+}
+#open:checked~#b2{
+    transition: all .7s;
+    transform: translateX(190px);
+}
+#open:checked~#b3{
+    transition: all .7s;
+    transform: translateY(190px);
+}
+#open:checked~#b4{
+    transition: all .7s;
+    transform: translateY(-190px);
+} 
+#open:checked~#b5{
+    transition: all .7s;
+    transform: translateX(-190px);
+} 
+
+#open:checked~#b6{
+    transition: all .3s;
+    transform: translate(-90px, 90px);
+} 
+#open:checked~#b7{
+    transition: all .3s;
+    transform: translate(90px, 90px);
+} 
+#open:checked~#b8{
+    transition: all .3s;
+    transform: translate(90px, -90px);
+} 
+
+#open:checked~#b9{
+    transition: all .3s;
+    transform: translate(-90px, -90px);
+} 
+
+#open:not(checked)~div{
+    transition: all .7s;
+    transform: translateY(0px);
+} 

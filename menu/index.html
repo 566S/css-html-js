@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Menu</title>
+</head>
+<body>
+    
+    <svg>
+        <defs>
+            <filter id="goo" height="300">
+                <feGaussianBlur in="SourceGraphic" stdDeviation='10' result="blur"/>
+                <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 55 -15" result='goo'/>
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+<div class="blobs">
+    <input type="checkbox" id="open" class="blob">
+    <label class="menu-open-bottom" for="open">
+        <span id="b1" class="blob"></span>
+
+    </label>
+    <div id="b2" class="blob"></div>
+    <div id="b3" class="blob"></div>
+    <div id="b4" class="blob"></div>
+    <div id="b5" class="blob"></div>
+    <div id="b6" class="blob"></div>
+    <div id="b7" class="blob"></div>
+    <div id="b8" class="blob"></div>
+    <div id="b9" class="blob"></div>
+    <!-- <div id="b10 " class="blob"></div> -->
+</div>
+</body>
+</html>
